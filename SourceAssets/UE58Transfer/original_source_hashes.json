@@ -1,0 +1,44 @@
+[
+  {
+    "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Simplified Platformer Pack\\Tilesheet\\platformPack_tilesheet.png",
+    "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\游戏场景最终版\\SourceAssets\\Reference120m\\platformPack_tilesheet.png",
+    "source_sha256": "2a8d24d3e1db9926d26b7288ce6fc904a690ca3ccd6e4e5c831cc476eedce3c5",
+    "copy_sha256": "2a8d24d3e1db9926d26b7288ce6fc904a690ca3ccd6e4e5c831cc476eedce3c5",
+    "passed": true
+  },
+  {
+    "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Spritesheet\\spritesheet_default.png",
+    "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\游戏场景最终版\\SourceAssets\\Reference120m\\Background Elements Redux\\Spritesheet\\spritesheet_default.png",
+    "source_sha256": "c9711e2d2d5089f2dbd6f6bd61de163c6419558e5b75e615597677dec6a495d0",
+    "copy_sha256": "c9711e2d2d5089f2dbd6f6bd61de163c6419558e5b75e615597677dec6a495d0",
+    "passed": true
+  },
+  {
+    "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\backgroundEmpty.png",
+    "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\游戏场景最终版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\backgroundEmpty.png",
+    "source_sha256": "baf35f0bb373ad67d7931d6bedd7abd3e736aa7bfac92f3d74504dfb73706775",
+    "copy_sha256": "baf35f0bb373ad67d7931d6bedd7abd3e736aa7bfac92f3d74504dfb73706775",
+    "passed": true
+  },
+  {
+    "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\Elements\\cloudLayer1.png",
+    "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\游戏场景最终版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\Elements\\cloudLayer1.png",
+    "source_sha256": "1dc6a707664a3c6173e14d746b58426369e7cdcb0809d8594cde4ea7b08c1347",
+    "copy_sha256": "1dc6a707664a3c6173e14d746b58426369e7cdcb0809d8594cde4ea7b08c1347",
+    "passed": true
+  },
+  {
+    "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\Elements\\groundLayer1.png",
+    "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\游戏场景最终版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\Elements\\groundLayer1.png",
+    "source_sha256": "23c66df5812b9395466644d4dcc5c7bcabe81d3ef68d1e3ee166a47971869e1f",
+    "copy_sha256": "23c66df5812b9395466644d4dcc5c7bcabe81d3ef68d1e3ee166a47971869e1f",
+    "passed": true
+  },
+  {
+    "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\Elements\\hills.png",
+    "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\游戏场景最终版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\Elements\\hills.png",
+    "source_sha256": "3ab7cec63df2e28379c6dfd9e64dff358607a707a19042cba7dd81a8a13bf5cd",
+    "copy_sha256": "3ab7cec63df2e28379c6dfd9e64dff358607a707a19042cba7dd81a8a13bf5cd",
+    "passed": true
+  }
+]

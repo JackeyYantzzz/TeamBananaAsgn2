@@ -1,0 +1,1946 @@
+{
+  "audit": "Final reference Paper2D map, collision and original-source provenance",
+  "timestamp_utc": "2026-09-29T06:27:15.682120+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Correct final project",
+      "passed": true,
+      "actual": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版"
+    },
+    {
+      "name": "All six PNGs match original hashes recorded by the verified UE5.8 project",
+      "passed": true,
+      "actual": {
+        "checked": 6,
+        "failed": []
+      }
+    },
+    {
+      "name": "Correct reference level currently open",
+      "passed": true,
+      "actual": "/Game/Levels/L_Reference120m.L_Reference120m"
+    },
+    {
+      "name": "Exactly one reference map actor",
+      "passed": true,
+      "actual": 1
+    },
+    {
+      "name": "Map actor has native PaperTileMapComponent",
+      "passed": true
+    },
+    {
+      "name": "Final revised native map asset assigned",
+      "passed": true,
+      "actual": "/Game/Reference120m/Tiles/TM_Reference120m_LowerStart.TM_Reference120m_LowerStart"
+    },
+    {
+      "name": "Map is an independently editable saved asset",
+      "passed": true
+    },
+    {
+      "name": "map_width",
+      "passed": true,
+      "actual": 240
+    },
+    {
+      "name": "map_height",
+      "passed": true,
+      "actual": 64
+    },
+    {
+      "name": "tile_width",
+      "passed": true,
+      "actual": 64
+    },
+    {
+      "name": "tile_height",
+      "passed": true,
+      "actual": 64
+    },
+    {
+      "name": "Pixels per cm is 1.28",
+      "passed": true
+    },
+    {
+      "name": "3D map collision enabled",
+      "passed": true
+    },
+    {
+      "name": "100cm collision thickness",
+      "passed": true
+    },
+    {
+      "name": "Unit map world scale",
+      "passed": true,
+      "actual": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Map actor collision and query enabled",
+      "passed": true
+    },
+    {
+      "name": "Map blocks Pawn",
+      "passed": true,
+      "actual": "<CollisionResponseType.ECR_BLOCK: 2>"
+    },
+    {
+      "name": "Map blocks Visibility",
+      "passed": true,
+      "actual": "<CollisionResponseType.ECR_BLOCK: 2>"
+    },
+    {
+      "name": "Exactly four intended layers",
+      "passed": true,
+      "actual": [
+        "Decoration_NoCollision",
+        "SurfaceCollision",
+        "TerrainCollision",
+        "Backdrop_NoCollision"
+      ]
+    },
+    {
+      "name": "Decoration_NoCollision order",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "Decoration_NoCollision collision",
+      "passed": true,
+      "actual": false
+    },
+    {
+      "name": "Decoration_NoCollision size",
+      "passed": true
+    },
+    {
+      "name": "SurfaceCollision order",
+      "passed": true,
+      "actual": 1
+    },
+    {
+      "name": "SurfaceCollision collision",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "SurfaceCollision size",
+      "passed": true
+    },
+    {
+      "name": "TerrainCollision order",
+      "passed": true,
+      "actual": 2
+    },
+    {
+      "name": "TerrainCollision collision",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "name": "TerrainCollision size",
+      "passed": true
+    },
+    {
+      "name": "Backdrop_NoCollision order",
+      "passed": true,
+      "actual": 3
+    },
+    {
+      "name": "Backdrop_NoCollision collision",
+      "passed": true,
+      "actual": false
+    },
+    {
+      "name": "Backdrop_NoCollision size",
+      "passed": true
+    },
+    {
+      "name": "Map origin and exact 12000cm span",
+      "passed": true,
+      "actual": {
+        "left_bottom": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "right_bottom": [
+          12000.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "All 61440 native cells match the traced layout",
+      "passed": true,
+      "actual": {
+        "cells_checked": 61440,
+        "mismatch_count": 0,
+        "first_mismatches": []
+      }
+    },
+    {
+      "name": "All six spike groups rest on grass",
+      "passed": true,
+      "actual": [
+        {
+          "id": "GrassSpikes_01",
+          "passed": true,
+          "ground_row": 57
+        },
+        {
+          "id": "GrassSpikes_02",
+          "passed": true,
+          "ground_row": 53
+        },
+        {
+          "id": "GrassSpikes_03",
+          "passed": true,
+          "ground_row": 52
+        },
+        {
+          "id": "GrassSpikes_04",
+          "passed": true,
+          "ground_row": 52
+        },
+        {
+          "id": "GrassSpikes_05",
+          "passed": true,
+          "ground_row": 38
+        },
+        {
+          "id": "GrassSpikes_06",
+          "passed": true,
+          "ground_row": 56
+        }
+      ]
+    },
+    {
+      "name": "All 24 reference stepping platforms are present",
+      "passed": true,
+      "actual": 24
+    },
+    {
+      "name": "All exposed terrain and cap tops block at intended height",
+      "passed": true,
+      "actual": {
+        "checked": 415,
+        "failed": []
+      }
+    },
+    {
+      "name": "Every one of 24 small platforms has physical top collision",
+      "passed": true,
+      "actual": {
+        "checked": 24,
+        "failed": []
+      }
+    },
+    {
+      "name": "Rear terrain is passable at sampled interior positions",
+      "passed": true,
+      "actual": [
+        {
+          "column": 7,
+          "row": 30,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 119,
+          "row": 30,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 7,
+          "row": 35,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 119,
+          "row": 35,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 126,
+          "row": 35,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 7,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 14,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 112,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 119,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 126,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 140,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 147,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 154,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 161,
+          "row": 40,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 7,
+          "row": 45,
+          "passed": true,
+          "unexpected_component": null
+        },
+        {
+          "column": 14,
+          "row": 45,
+          "passed": true,
+          "unexpected_component": null
+        }
+      ]
+    },
+    {
+      "name": "138 native sprite actors have valid assigned original-pack sprites",
+      "passed": true,
+      "actual": {
+        "count": 138,
+        "failed": []
+      }
+    },
+    {
+      "name": "Scenery sprite actors do not collide",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "name": "Two water basins and five waterfalls exist without collision",
+      "passed": true,
+      "actual": [
+        {
+          "actor": "Main_west_basin",
+          "type": "basin",
+          "instances": 122,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            2701.1719,
+            -45.0,
+            0.0
+          ]
+        },
+        {
+          "actor": "Main_east_basin",
+          "type": "basin",
+          "instances": 84,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            8583.9844,
+            -45.0,
+            0.0
+          ]
+        },
+        {
+          "actor": "West_short_fall",
+          "type": "waterfall",
+          "instances": 20,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            1986.3281,
+            -45.0,
+            621.0938
+          ]
+        },
+        {
+          "actor": "West_basin_fall",
+          "type": "waterfall",
+          "instances": 20,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            2707.0312,
+            -45.0,
+            380.8594
+          ]
+        },
+        {
+          "actor": "Island_upper_fall",
+          "type": "waterfall",
+          "instances": 18,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            3638.6719,
+            -45.0,
+            615.2344
+          ]
+        },
+        {
+          "actor": "Island_lower_fall",
+          "type": "waterfall",
+          "instances": 38,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            3562.5,
+            -45.0,
+            380.8594
+          ]
+        },
+        {
+          "actor": "Central_tall_fall",
+          "type": "waterfall",
+          "instances": 32,
+          "passed": true,
+          "no_collision": true,
+          "location": [
+            6609.375,
+            -45.0,
+            410.1562
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blue sky covers the full reference frame and edges",
+      "passed": true,
+      "actual": {
+        "min_x": -1000.0,
+        "max_x": 13000.0,
+        "min_z": -1700.0,
+        "max_z": 3900.0
+      }
+    }
+  ],
+  "failures": [],
+  "measurements": {
+    "layout_validation": {
+      "passed": true,
+      "span_cm": 12000,
+      "grid": [
+        240,
+        64
+      ],
+      "polygons": 15,
+      "surfaces": 37,
+      "stepping_platforms": 24,
+      "trees": 27,
+      "bushes": 31,
+      "spike_groups": 6,
+      "water_basins": 2,
+      "waterfalls": 5,
+      "player_playtest": false
+    },
+    "original_source_sha256": [
+      {
+        "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Simplified Platformer Pack\\Tilesheet\\platformPack_tilesheet.png",
+        "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版\\SourceAssets\\Reference120m\\platformPack_tilesheet.png",
+        "source_sha256": "2a8d24d3e1db9926d26b7288ce6fc904a690ca3ccd6e4e5c831cc476eedce3c5",
+        "copy_sha256": "2a8d24d3e1db9926d26b7288ce6fc904a690ca3ccd6e4e5c831cc476eedce3c5",
+        "passed": true
+      },
+      {
+        "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Spritesheet\\spritesheet_default.png",
+        "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版\\SourceAssets\\Reference120m\\Background Elements Redux\\Spritesheet\\spritesheet_default.png",
+        "source_sha256": "c9711e2d2d5089f2dbd6f6bd61de163c6419558e5b75e615597677dec6a495d0",
+        "copy_sha256": "c9711e2d2d5089f2dbd6f6bd61de163c6419558e5b75e615597677dec6a495d0",
+        "passed": true
+      },
+      {
+        "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\backgroundEmpty.png",
+        "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\backgroundEmpty.png",
+        "source_sha256": "baf35f0bb373ad67d7931d6bedd7abd3e736aa7bfac92f3d74504dfb73706775",
+        "copy_sha256": "baf35f0bb373ad67d7931d6bedd7abd3e736aa7bfac92f3d74504dfb73706775",
+        "passed": true
+      },
+      {
+        "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\Elements\\cloudLayer1.png",
+        "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\Elements\\cloudLayer1.png",
+        "source_sha256": "1dc6a707664a3c6173e14d746b58426369e7cdcb0809d8594cde4ea7b08c1347",
+        "copy_sha256": "1dc6a707664a3c6173e14d746b58426369e7cdcb0809d8594cde4ea7b08c1347",
+        "passed": true
+      },
+      {
+        "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\Elements\\groundLayer1.png",
+        "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\Elements\\groundLayer1.png",
+        "source_sha256": "23c66df5812b9395466644d4dcc5c7bcabe81d3ef68d1e3ee166a47971869e1f",
+        "copy_sha256": "23c66df5812b9395466644d4dcc5c7bcabe81d3ef68d1e3ee166a47971869e1f",
+        "passed": true
+      },
+      {
+        "original": "C:\\Users\\dee04\\Downloads\\May Use Assets\\Background Elements Redux\\Backgrounds\\Elements\\hills.png",
+        "project_copy": "C:\\Users\\dee04\\OneDrive\\文档\\Unreal Projects\\场景地图新版\\SourceAssets\\Reference120m\\Background Elements Redux\\Backgrounds\\Elements\\hills.png",
+        "source_sha256": "3ab7cec63df2e28379c6dfd9e64dff358607a707a19042cba7dd81a8a13bf5cd",
+        "copy_sha256": "3ab7cec63df2e28379c6dfd9e64dff358607a707a19042cba7dd81a8a13bf5cd",
+        "passed": true
+      }
+    ],
+    "map_corners": {
+      "left_bottom": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_bottom": [
+        12000.0,
+        0.0,
+        0.0
+      ]
+    },
+    "native_tile_counts": {
+      "Decoration_NoCollision": 30,
+      "SurfaceCollision": 412,
+      "TerrainCollision": 1986,
+      "Backdrop_NoCollision": 3499
+    },
+    "exposed_top_trace_counts": {
+      "surface": 402,
+      "terrain": 13
+    },
+    "platform_collision_traces": [
+      {
+        "kind": "Step_01",
+        "column": 4,
+        "row": 33,
+        "expected_z": 1550,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          225.0,
+          0.0,
+          1550.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_02",
+        "column": 8,
+        "row": 33,
+        "expected_z": 1550,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          425.0,
+          0.0,
+          1550.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_03",
+        "column": 6,
+        "row": 39,
+        "expected_z": 1250,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          325.0,
+          0.0,
+          1250.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_04",
+        "column": 5,
+        "row": 45,
+        "expected_z": 950,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          275.0,
+          0.0,
+          950.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_05",
+        "column": 8,
+        "row": 46,
+        "expected_z": 900,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          425.0,
+          0.0,
+          900.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_06",
+        "column": 7,
+        "row": 48,
+        "expected_z": 800,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          375.0,
+          0.0,
+          800.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_07",
+        "column": 23,
+        "row": 38,
+        "expected_z": 1300,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          1175.0,
+          0.0,
+          1300.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_08",
+        "column": 58,
+        "row": 49,
+        "expected_z": 750,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          2925.0,
+          0.0,
+          750.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_09",
+        "column": 61,
+        "row": 48,
+        "expected_z": 800,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          3075.0,
+          0.0,
+          800.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_10",
+        "column": 60,
+        "row": 52,
+        "expected_z": 600,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          3025.0,
+          0.0,
+          600.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_11",
+        "column": 116,
+        "row": 31,
+        "expected_z": 1650,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          5825.0,
+          0.0,
+          1650.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_12",
+        "column": 121,
+        "row": 36,
+        "expected_z": 1400,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          6075.0,
+          0.0,
+          1400.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_13",
+        "column": 118,
+        "row": 42,
+        "expected_z": 1100,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          5925.0,
+          0.0,
+          1100.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_14",
+        "column": 122,
+        "row": 47,
+        "expected_z": 850,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          6125.0,
+          0.0,
+          850.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_15",
+        "column": 116,
+        "row": 51,
+        "expected_z": 650,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          5825.0,
+          0.0,
+          650.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_16",
+        "column": 120,
+        "row": 58,
+        "expected_z": 300,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          6025.0,
+          0.0,
+          300.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_17",
+        "column": 179,
+        "row": 43,
+        "expected_z": 1050,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          8975.0,
+          0.0,
+          1050.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_18",
+        "column": 175,
+        "row": 48,
+        "expected_z": 800,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          8775.0,
+          0.0,
+          800.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_19",
+        "column": 175,
+        "row": 49,
+        "expected_z": 750,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          8775.0,
+          0.0,
+          750.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_20",
+        "column": 182,
+        "row": 48,
+        "expected_z": 800,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          9125.0,
+          0.0,
+          800.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_21",
+        "column": 179,
+        "row": 52,
+        "expected_z": 600,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          8975.0,
+          0.0,
+          600.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_22",
+        "column": 184,
+        "row": 52,
+        "expected_z": 600,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          9225.0,
+          0.0,
+          600.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_23",
+        "column": 183,
+        "row": 54,
+        "expected_z": 500,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          9175.0,
+          0.0,
+          500.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      },
+      {
+        "kind": "Step_24",
+        "column": 198,
+        "row": 51,
+        "expected_z": 650,
+        "passed": true,
+        "blocking": true,
+        "impact": [
+          9925.0,
+          0.0,
+          650.0
+        ],
+        "hit_component": "/Game/Levels/L_Reference120m.L_Reference120m:PersistentLevel.PaperTileMapActor_0.RenderComponent"
+      }
+    ],
+    "sprite_actor_bindings": [
+      {
+        "actor": "BG_000_sky",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Sky.S_BG_Sky",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Sky.T_BG_Sky",
+        "collision": false
+      },
+      {
+        "actor": "BG_001_cloudBank",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_CloudBank.S_BG_CloudBank",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_CloudBank.T_BG_CloudBank",
+        "collision": false
+      },
+      {
+        "actor": "BG_002_cloudBank",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_CloudBank.S_BG_CloudBank",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_CloudBank.T_BG_CloudBank",
+        "collision": false
+      },
+      {
+        "actor": "BG_003_cloudBank",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_CloudBank.S_BG_CloudBank",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_CloudBank.T_BG_CloudBank",
+        "collision": false
+      },
+      {
+        "actor": "BG_004_cloudBank",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_CloudBank.S_BG_CloudBank",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_CloudBank.T_BG_CloudBank",
+        "collision": false
+      },
+      {
+        "actor": "BG_005_cloud2",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud2.S_BG_cloud2",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_006_cloud1",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud1.S_BG_cloud1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_007_cloud3",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud3.S_BG_cloud3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_008_cloud2",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud2.S_BG_cloud2",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_009_cloud4",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud4.S_BG_cloud4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_010_cloud2",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud2.S_BG_cloud2",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_011_cloud3",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud3.S_BG_cloud3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_012_cloud2",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud2.S_BG_cloud2",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_013_cloud4",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud4.S_BG_cloud4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_014_cloud2",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud2.S_BG_cloud2",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_015_cloud1",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud1.S_BG_cloud1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_016_cloud2",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_cloud2.S_BG_cloud2",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_017_hills",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Hills.S_BG_Hills",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Hills.T_BG_Hills",
+        "collision": false
+      },
+      {
+        "actor": "BG_018_hills",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Hills.S_BG_Hills",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Hills.T_BG_Hills",
+        "collision": false
+      },
+      {
+        "actor": "BG_019_hills",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Hills.S_BG_Hills",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Hills.T_BG_Hills",
+        "collision": false
+      },
+      {
+        "actor": "BG_020_hills",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Hills.S_BG_Hills",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Hills.T_BG_Hills",
+        "collision": false
+      },
+      {
+        "actor": "BG_021_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_022_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_023_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_024_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_025_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_026_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_027_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_028_meadow",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_Meadow.S_BG_Meadow",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Meadow.T_BG_Meadow",
+        "collision": false
+      },
+      {
+        "actor": "BG_029_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_030_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_031_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_032_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_033_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_034_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_035_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_036_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_037_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_038_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_039_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_040_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_041_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_042_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_043_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_044_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_045_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_046_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_047_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_048_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_049_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_050_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_051_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_052_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_053_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_054_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_055_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_056_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_057_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_058_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_059_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_060_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_061_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_062_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_063_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_064_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_065_treeLong",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_treeLong.S_BG_treeLong",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_066_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "BG_067_tree",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_01",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_02",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_03",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_04",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_05",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_06",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_07",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_08",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_09",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_10",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_11",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_12",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_13",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_14",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_15",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_16",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_17",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_18",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_19",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_20",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_21",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_22",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_23",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_24",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_25",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_26",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "trees_27",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_tree.S_BG_tree",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_01",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_02",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_03",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_04",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_05",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_06",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_07",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_08",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_09",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_10",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_11",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_12",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_13",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_14",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_15",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_16",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_17",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_18",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_19",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_20",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_21",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_22",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_23",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_24",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_25",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_26",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_27",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_28",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_29",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush3.S_BG_bush3",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_30",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushAlt1.S_BG_bushAlt1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "bushes_31",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush1.S_BG_bush1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_01",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushOrange1.S_BG_bushOrange1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_02",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_03",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_04",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushOrange1.S_BG_bushOrange1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_05",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_06",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_07",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushOrange1.S_BG_bushOrange1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_08",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_09",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_10",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bushOrange1.S_BG_bushOrange1",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_11",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      },
+      {
+        "actor": "rocks_12",
+        "passed": true,
+        "sprite": "/Game/Reference120m/Background/Sprites/S_BG_bush4.S_BG_bush4",
+        "source_texture": "/Game/Reference120m/Background/Textures/T_BG_Atlas.T_BG_Atlas",
+        "collision": false
+      }
+    ],
+    "water_actors": [
+      {
+        "actor": "Main_west_basin",
+        "type": "basin",
+        "instances": 122,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          2701.1719,
+          -45.0,
+          0.0
+        ]
+      },
+      {
+        "actor": "Main_east_basin",
+        "type": "basin",
+        "instances": 84,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          8583.9844,
+          -45.0,
+          0.0
+        ]
+      },
+      {
+        "actor": "West_short_fall",
+        "type": "waterfall",
+        "instances": 20,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          1986.3281,
+          -45.0,
+          621.0938
+        ]
+      },
+      {
+        "actor": "West_basin_fall",
+        "type": "waterfall",
+        "instances": 20,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          2707.0312,
+          -45.0,
+          380.8594
+        ]
+      },
+      {
+        "actor": "Island_upper_fall",
+        "type": "waterfall",
+        "instances": 18,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          3638.6719,
+          -45.0,
+          615.2344
+        ]
+      },
+      {
+        "actor": "Island_lower_fall",
+        "type": "waterfall",
+        "instances": 38,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          3562.5,
+          -45.0,
+          380.8594
+        ]
+      },
+      {
+        "actor": "Central_tall_fall",
+        "type": "waterfall",
+        "instances": 32,
+        "passed": true,
+        "no_collision": true,
+        "location": [
+          6609.375,
+          -45.0,
+          410.1562
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Map geometry and editor collision queries only; no character playtest.",
+    "Water, spikes, gems and crates are visual placement only.",
+    "Jump reachability, damage, swimming and 60-90 second traversal require gameplay integration.",
+    "Original-pack artwork approximates the reference composition; it is not identical source artwork."
+  ],
+  "check_count": 42
+}

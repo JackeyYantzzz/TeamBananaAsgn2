@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "engine": "5.7.4-51494982+++UE5+Release-5.7",
+  "checks": 2775,
+  "failures": [],
+  "measurements": {
+    "tile_cells_compared": 61440,
+    "assets": 31,
+    "actors": 165,
+    "original_map_checks": 42,
+    "span_cm": 12000
+  }
+}

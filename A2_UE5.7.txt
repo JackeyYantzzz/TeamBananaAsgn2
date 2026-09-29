@@ -1,0 +1,17 @@
+﻿场景地图新版 — UE5.7
+
+打开工程：场景地图新版.uproject（Unreal Engine 5.7）
+打开地图：Content/Levels/L_Reference120m.umap
+可编辑瓦片：Content/Reference120m/Tiles/TM_Reference120m_LowerStart.uasset
+
+已将原5.8工程“游戏场景最终版”（下载ZIP名为“游戏场景新版本”）的地图、原始贴图、精灵、瓦片集、背景、水体及相机转换为5.7原生资产。
+工程默认打开本地图。当前地图长120米；起点低台阶、全部背景和原有碰撞配置已保留。
+31个资源、165个场景对象、61440个瓦片格已对照检查。原图与5.8工程此前记录的原素材SHA256一致。
+此工程可独立打开，Content中没有直接复制5.8二进制资产。
+
+查看全景：在大纲中找到Camera_Reference_Overview，右键选择引导/驾驶（Pilot）。视图模式选择“无光照”。
+编辑地图：在内容浏览器中打开TM_Reference120m_LowerStart。
+SourceAssets中保留原图、许可证和转移数据；Verification中保存检查结果。
+
+本项目仅包含地图。角色、地刺伤害、游泳、收集和通关逻辑不在本次转移范围内。
+本工程可独立运行，不需要UE5.8。
