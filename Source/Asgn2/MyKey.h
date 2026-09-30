@@ -4,28 +4,28 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MyDiamond.generated.h"
+#include "MyKey.generated.h"
 
 UCLASS()
-class ASGN2_API AMyDiamond : public AActor
+class ASGN2_API AMyKey : public AActor
 {
 	GENERATED_BODY()
 
 public:
-	AMyDiamond();
+	AMyKey();
 
 protected:
 	virtual void BeginPlay() override;
 
-	// Sphere collision component to detect player overlap
+	// Collision component for the key
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USphereComponent* CollisionComponent;
 
-	// Sprite component to display the diamond visual
+	// Sprite component for the key visual
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class UPaperSpriteComponent* SpriteComponent;
 
-	// Overlap event function
+	// Overlap event function for level completion
 	UFUNCTION()
 	void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };
