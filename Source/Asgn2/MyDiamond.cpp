@@ -34,7 +34,6 @@ void AMyDiamond::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 {
 	if (OtherActor && (OtherActor != this))
 	{
-		// Check if the overlapping actor is our player character
 		AMyPaperCharacter* PlayerCharacter = Cast<AMyPaperCharacter>(OtherActor);
 		if (PlayerCharacter)
 		{

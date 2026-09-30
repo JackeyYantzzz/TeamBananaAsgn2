@@ -4,23 +4,26 @@
 #include "Components/SphereComponent.h"
 #include "PaperSpriteComponent.h"
 #include "MyPaperCharacter.h"
+#include "MyPortal.h"
 #include "Kismet/GameplayStatics.h"
+#include "Engine/World.h"
 
 AMyKey::AMyKey()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
-	// Create and set up root collision
-	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
-	CollisionComponent->InitSphereRadius(32.0f);
-	CollisionComponent->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
-	RootComponent = CollisionComponent;
-
-	// Create and attach sprite component
+	// 1. Create the Sprite component and set it as the RootComponent so it renders properly
 	SpriteComponent = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("SpriteComponent"));
-	SpriteComponent->SetupAttachment(RootComponent);
+	RootComponent = SpriteComponent;
 
-	// Bind overlap event
+	// 2. Create and setup the collision component, then attach it to the root
+	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
+	CollisionComponent->InitSphereRadius(40.0f);
+	CollisionComponent->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
+	CollisionComponent->SetupAttachment(RootComponent);
+	CollisionComponent->SetRelativeLocation(FVector::ZeroVector);
+
+	// Bind the overlap event
 	CollisionComponent->OnComponentBeginOverlap.AddDynamic(this, &AMyKey::OnOverlapBegin);
 }
 
@@ -36,11 +39,21 @@ void AMyKey::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherAc
 		AMyPaperCharacter* PlayerCharacter = Cast<AMyPaperCharacter>(OtherActor);
 		if (PlayerCharacter)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Level Cleared! Key collected."));
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Key Collected!"));
 
-			// Restart or clear the level upon collecting the key
-			UGameplayStatics::OpenLevel(GetWorld(), FName(*GetWorld()->GetName()));
+			// Find all portals in the world and set their bHasKey status to true
+			TArray<AActor*> FoundPortals;
+			UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMyPortal::StaticClass(), FoundPortals);
+			for (AActor* PortalActor : FoundPortals)
+			{
+				AMyPortal* Portal = Cast<AMyPortal>(PortalActor);
+				if (Portal)
+				{
+					Portal->bHasKey = true;
+				}
+			}
 
+			// Destroy the key actor after collection
 			Destroy();
 		}
 	}

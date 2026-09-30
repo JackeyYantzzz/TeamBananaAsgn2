@@ -27,10 +27,19 @@ void AMyGameMode::CollectDiamond()
 			UWorld* World = GetWorld();
 			if (World)
 			{
-				FActorSpawnParameters SpawnParams;
-				// Spawn the key at the designated location
-				World->SpawnActor<AActor>(KeyClass, KeySpawnLocation, FRotator::ZeroRotator, SpawnParams);
-				UE_LOG(LogTemp, Warning, TEXT("All diamonds collected! Key has spawned on the map."));
+				// Dynamically get the player character's current location in the world
+				APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(World, 0);
+				if (PlayerPawn)
+				{
+					FVector PlayerLocation = PlayerPawn->GetActorLocation();
+
+					// Set the spawn location to be slightly in front of the player (e.g., 150 units ahead on the X axis)
+					FVector SpawnLocation = PlayerLocation + FVector(150.0f, 0.0f, 50.0f);
+
+					FActorSpawnParameters SpawnParams;
+					World->SpawnActor<AActor>(KeyClass, SpawnLocation, FRotator::ZeroRotator, SpawnParams);
+					UE_LOG(LogTemp, Warning, TEXT("All diamonds collected! Key spawned in front of the player."));
+				}
 			}
 		}
 	}
