@@ -4,13 +4,11 @@
 #include "PaperFlipbookComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h" 
 
 AMyPaperCharacter::AMyPaperCharacter()
 {
-	// Enable Tick per frame
 	PrimaryActorTick.bCanEverTick = true;
-
-	// Set default max jump count to 1 (single jump)
 	JumpMaxCount = 1;
 }
 
@@ -18,7 +16,15 @@ void AMyPaperCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// 1. If the character is in the air (jumping or falling)
+	// 1. Fall into the void (Death Check): If Z coordinate is below -600, restart the level
+	if (GetActorLocation().Z < -600.0f)
+	{
+		// Restart the current level immediately upon falling
+		UGameplayStatics::OpenLevel(GetWorld(), FName(*GetWorld()->GetName()));
+		return; // Exit Tick to prevent further processing after death
+	}
+
+	// 2. Air / Jump state animation logic
 	if (GetCharacterMovement()->IsFalling())
 	{
 		if (JumpAnimation && GetSprite()->GetFlipbook() != JumpAnimation)
@@ -28,7 +34,7 @@ void AMyPaperCharacter::Tick(float DeltaTime)
 	}
 	else
 	{
-		// 2. If on the ground: check lateral speed to distinguish running vs standing still
+		// 3. Ground state: check lateral speed for running vs standing still
 		float LateralSpeed = GetVelocity().Size2D();
 
 		if (LateralSpeed > 5.0f) // Moving
@@ -52,10 +58,7 @@ void AMyPaperCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	// 1. Bind the "MoveRight" axis mapping configured in Project Settings -> Input (A/D keys)
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMyPaperCharacter::MoveRight);
-
-	// 2. Bind jump actions (configured with the W key in Project Settings -> Input -> Jump)
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyPaperCharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMyPaperCharacter::StopJumping);
 }
@@ -64,18 +67,14 @@ void AMyPaperCharacter::MoveRight(float Value)
 {
 	if (Controller != nullptr && Value != 0.0f)
 	{
-		// 1. Apply movement input along the X axis
 		AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
 
-		// 2. Flip the sprite rotation based on the movement direction
 		if (Value > 0.0f)
 		{
-			// Face right
 			GetSprite()->SetRelativeRotation(FRotator(0.0f, 0.0f, 0.0f));
 		}
 		else if (Value < 0.0f)
 		{
-			// Face left (rotate 180 degrees)
 			GetSprite()->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
 		}
 	}
@@ -83,6 +82,5 @@ void AMyPaperCharacter::MoveRight(float Value)
 
 void AMyPaperCharacter::UnlockDoubleJump()
 {
-	// Upgrade max jump count to 2 when picking up the item
 	JumpMaxCount = 2;
 }
