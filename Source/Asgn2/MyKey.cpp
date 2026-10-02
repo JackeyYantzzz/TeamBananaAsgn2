@@ -12,18 +12,18 @@ AMyKey::AMyKey()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
-	// 1. Create the Sprite component and set it as the RootComponent so it renders properly
-	SpriteComponent = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("SpriteComponent"));
-	RootComponent = SpriteComponent;
-
-	// 2. Create and setup the collision component, then attach it to the root
+	// 1. Create the collision component first and set it as the RootComponent
 	CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
 	CollisionComponent->InitSphereRadius(40.0f);
 	CollisionComponent->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
-	CollisionComponent->SetupAttachment(RootComponent);
-	CollisionComponent->SetRelativeLocation(FVector::ZeroVector);
+	RootComponent = CollisionComponent; // Set as root
 
-	// Bind the overlap event
+	// 2. Create the Sprite component and attach it to the collision component
+	SpriteComponent = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("SpriteComponent"));
+	SpriteComponent->SetupAttachment(RootComponent);
+	SpriteComponent->SetRelativeLocation(FVector::ZeroVector);
+
+	// 3. Bind the overlap event
 	CollisionComponent->OnComponentBeginOverlap.AddDynamic(this, &AMyKey::OnOverlapBegin);
 }
 
