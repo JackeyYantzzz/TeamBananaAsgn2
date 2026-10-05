@@ -36,6 +36,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Animations")
 	class UPaperFlipbook* IdleAnimation;
 
+	// --- Health System Properties ---
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	int32 MaxHealth = 3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	int32 CurrentHealth = 3;
+
+	// Function to handle taking damage (called by spike trap or enemies)
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	virtual void TakeDamageCustom(int32 DamageAmount);
+
 protected:
 	// Handles left/right movement input
 	void MoveRight(float Value);

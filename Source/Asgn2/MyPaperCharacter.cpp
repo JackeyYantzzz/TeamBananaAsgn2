@@ -4,12 +4,16 @@
 #include "PaperFlipbookComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Kismet/GameplayStatics.h" 
+#include "Kismet/GameplayStatics.h"
 
 AMyPaperCharacter::AMyPaperCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	JumpMaxCount = 1;
+
+	// Initialize health
+	MaxHealth = 3;
+	CurrentHealth = 3;
 }
 
 void AMyPaperCharacter::Tick(float DeltaTime)
@@ -83,4 +87,23 @@ void AMyPaperCharacter::MoveRight(float Value)
 void AMyPaperCharacter::UnlockDoubleJump()
 {
 	JumpMaxCount = 2;
+}
+
+void AMyPaperCharacter::TakeDamageCustom(int32 DamageAmount)
+{
+	CurrentHealth -= DamageAmount;
+	if (CurrentHealth < 0)
+	{
+		CurrentHealth = 0;
+	}
+
+	// Print debug message showing current health
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, FString::Printf(TEXT("Player Damaged! Current Health: %d / %d"), CurrentHealth, MaxHealth));
+
+	// If health drops to 0, restart the level
+	if (CurrentHealth <= 0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Player Died! Restarting level..."));
+		UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()));
+	}
 }
