@@ -32,4 +32,10 @@ public:
 	// Flag indicating whether the player has collected the key
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Portal")
 	bool bHasKey;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Portal")
+	void OnPortalVictory();
+
+	UPROPERTY(BlueprintReadOnly, Category = "Portal")
+	bool bVictoryTriggered = false;
 };

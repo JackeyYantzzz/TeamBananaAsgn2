@@ -29,6 +29,10 @@ AMyPortal::AMyPortal()
 void AMyPortal::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Locked portals start hidden and cannot be entered.
+	SetActorHiddenInGame(!bHasKey);
+	SetActorEnableCollision(bHasKey);
 }
 
 void AMyPortal::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -39,16 +43,10 @@ void AMyPortal::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 		if (PlayerCharacter)
 		{
 			// Check if the player has the key to unlock the portal
-			if (bHasKey)
+			if (bHasKey && !bVictoryTriggered)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, TEXT("Victory! Level Completed!"));
-
-				// Restart or complete the current level
-				UGameplayStatics::OpenLevel(GetWorld(), FName(*GetWorld()->GetName()));
-			}
-			else
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("Locked! You need a key to enter!"));
+				bVictoryTriggered = true;
+				OnPortalVictory();
 			}
 		}
 	}

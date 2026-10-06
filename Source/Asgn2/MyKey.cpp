@@ -50,6 +50,8 @@ void AMyKey::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherAc
 				if (Portal)
 				{
 					Portal->bHasKey = true;
+					Portal->SetActorHiddenInGame(false);
+					Portal->SetActorEnableCollision(true);
 				}
 			}
 
